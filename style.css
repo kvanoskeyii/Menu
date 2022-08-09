@@ -13,7 +13,7 @@
   background-color: white;
 }
 .container{
-    margin-top: 300px;
+    margin-top: 25px;
     display: grid;
     grid-template-columns: 1fr;
     display: flex;
