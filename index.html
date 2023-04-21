@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://kit.fontawesome.com/398c96c2c7.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
@@ -58,13 +58,13 @@
         padding-top: 200px;
         padding-left: 50px;
         font-family: 'Kdam Thmor Pro', sans-serif;
-background-color: black;
+        background-color: black;
+        color: white;
 
       }
       .welcome1{
         font-size: 30px;
         padding-bottom: 10px;
-        color: white;
 
       }
 
@@ -106,11 +106,101 @@ cursor: pointer;
 
 
 .latest{
-  height: 500px;
+  height: 60px;
   background-color: black;
 }
 
+.social-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			gap: 10px;
+			padding: 10px;
+			background-color: black;
+		}
 
+		.grid-item {
+			background-color: transparent;
+			color: #fff;
+			text-align: center;
+			padding: 20px;
+			font-size: 30px;
+		}
+
+    .grid-item a{
+      color: white;
+    }
+    .high-section{
+      padding-top: 100px;
+        padding-left: 50px;
+        width: 500px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        background-color: black;
+        color: white;
+        font-size: 28px;
+        height: 800px;
+
+    }
+    .hi-1{
+      padding-bottom: 50px;
+    }
+    .about-section{
+
+      padding-top: 100px;
+    }
+    .about-header{
+        padding-left: 50px;
+        font-size: 28px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        background-color: black;
+        color: white;
+        padding-top: 50px;
+    }
+    .about-content{
+      padding-left: 50px;
+      background-color: black;
+      color: white;
+      padding-top: 30px;
+    }
+   
+    .team-section {
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-member {
+  width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.team-member img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+
+.team-member h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.team-member p {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
     </style>
 
   </head>
@@ -127,17 +217,119 @@ cursor: pointer;
     <div class="welcome-section">
       <div class="welcome1">Welcome to the CodeX hub!</div>
       <div class="welcome2">New content is posted daily on all major social media<br>platforms.</div>
-      <div class="watch-link"><a href="https://www.example.com"><button class="watch-promo">Watch Now</button></a></div>
+      <div class="watch-link"><a href="https://www.youtube.com/channel/UCsJO4udoFqbwgc0D9i1ePjg"><button class="watch-promo">Watch Now</button></a></div>
     </div>
 
 
 
     <div class="latest">
+    </div>
 
-  
+    <div class="social-container">
+      <div class="grid-item"><a href="https://m.facebook.com/TheCodeXStation/"><i class="fa-brands fa-xl fa-facebook all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://twitter.com/TheCodeXStation"><i class="fa-brands fa-xl fa-twitter all-icons icon-margin"></i> </a></div>
+      <div class="grid-item"><a href="https://www.instagram.com/thecodexstation/"><i class="fa-brands fa-xl fa-instagram all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://www.youtube.com/c/TheCodeXStation"><i class="fa-brands fa-xl fa-youtube all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://open.spotify.com/show/3QOFNOyq8YEXwHwwZt7dzD?si=LGO958joTVeHAn5rpTKFpw&utm_source=copy-link"><i class="fa-brands fa-xl fa-spotify all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://discord.gg/M3vmkEwD"><i class="fa-brands fa-xl fa-discord all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://www.tiktok.com/@thecodexstation"><i class="fa-brands fa-xl fa-tiktok all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://m.twitch.tv/thecodexstation"><i class="fa-brands fa-xl fa-twitch all-icons icon-margin"></i></a></div>
+      <div class="grid-item"><a href="https://www.patreon.com/TheCodeXStation"><i class="fa-brands fa-xl fa-patreon all-icons icon-margin"></i></a></div>
+    </div>
+ 
 
+    <div class="high-section">
+      <div class="hi-1">Highlights</div>
+      <div><iframe width="425" height="315" src="https://www.youtube.com/embed/1KINUcr8Rdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div><iframe width="425" height="315" src="https://www.youtube.com/embed/PnFh2H_7Jus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    </div>
+
+    <section class="team-section">
+      <h2>Meet the Team</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="jamie.jpg" alt="Team Member 1">
+          <h3>Jamie Wojcik</h3>
+          <p>CEO</p>
+          <p>is the creator of the Code X Station and contributes to all shows.</p>
+     
+        </div>
+        
+        <div class="team-member">
+          <img src="sk.jpg" alt="Team Member 1">
+          <h3>Sonny Kruger</h3>
+          <p>Host</p>
+          <p>Code-X Podcast| Code-X Reviews| Mail Call| One Shots</p>
+     
+        </div>
+        
+        <div class="team-member">
+          <img src="tim.jpg" alt="Team Member 1">
+          <h3>Tim Morse</h3>
+          <p>Host</p>
+          <p>Code-X Podcast| Code-X Reviews| Scripting editor| Breaking the Code| After Dark| Decoding Panels| One Shots</p>
+     
+        </div>
+        
+        <div class="team-member">
+          <img src="kristen.jpg" alt="Team Member 1">
+          <h3>Kristen Kurek</h3>
+          <p>Host</p>
+          <p>After Dark| Code-X Reviews</p>
+     
+        </div>
+        
+        <div class="team-member">
+          <img src="sal.jpg" alt="Team Member 1">
+          <h3>Sal Rowe</h3>
+          <p>Host</p>
+          <p>Slabbed| After Dark| Comic Character of the Week</p>
+     
+        </div>
+        
+        <div class="team-member">
+          <img src="Dan.jpeg" alt="Team Member 1">
+          <h3>Dan Kelley</h3>
+          <p>Host</p>
+          <p>After Dark| Comic Character of the Week| Code-X Reviews</p>
+     
+        </div>
+        <div class="team-member">
+          <img src="kevin.jpeg" alt="Team Member 1">
+          <h3>Kevin Berkeley</h3>
+          <p>Host</p>
+          <p>Comic Character of the Week| After Dark</p>
+     
+        </div>
+        <div class="team-member">
+          <img src="wes.jpg" alt="Team Member 1">
+          <h3>Wes Baessler</h3>
+          <p>Host</p>
+          <p>Slabbed| After Dark| On the Spot</p>
+        </div>
+
+        <div class="team-member">
+          <img src="keith.jpg" alt="Team Member 1">
+          <h3>Keith Vanoskey II</h3>
+          <p>Graphic & Web</p>
+        </div>
+      </div>
+
+
+
+
+
+
+    <div class="about-section">
+      <div class="about-header">About the Code X Station</div>
+      <div class="about-content">The Code X Station is your one stop shop for all things<br>comics, news and graphics novels
+      . The idea was to create<br>a brand, not just one channel where multiple creators could<br>come together and share their
+      love and passion. As the<br>channel grows we hope to see more creators onboard<br>for our epic journey!
+      </div>
 
     </div>
+
+
 
 
 
