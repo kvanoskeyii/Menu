@@ -269,20 +269,10 @@ img {cursor: pointer;}
 		.modal-content {
 		  background-color: #fefefe;
 		  margin: 10% auto;
+      margin-top: 100px;
 		  padding: 20px;
 		  border: 1px solid #888;
 		  width: 80%;
-      position: relative;
-		}
-		
-		/* Style for the close button */
-		.close {
-		  color: #aaa;
-		  font-size: 28px;
-		  font-weight: bold;
-      position: absolute;
-      right: 5px;
-      bottom: 0px;
 		}
 		
 		.close:hover,
@@ -468,11 +458,22 @@ img {cursor: pointer;}
         modal.style.display = "block";
       }
       
-      // Function to close the modal box
-      function closeModal(id) {
-        var modal = document.getElementById(id);
-        modal.style.display = "none";
-      }
+   // Close modal when user clicks outside of the modal box or scrolls the page
+window.onclick = function(event) {
+  var modals = document.getElementsByClassName("modal");
+  for (var i = 0; i < modals.length; i++) {
+    if (event.target == modals[i]) {
+      modals[i].style.display = "none";
+    }
+  }
+}
+
+window.onscroll = function() {
+  var modals = document.getElementsByClassName("modal");
+  for (var i = 0; i < modals.length; i++) {
+    modals[i].style.display = "none";
+  }
+}
     </script>
   </body>
 </html>
