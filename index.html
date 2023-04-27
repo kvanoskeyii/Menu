@@ -1,510 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/398c96c2c7.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-      
-        nav {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          left: 0;
-          right: 0;
-          top: 0;
-          z-index: 100;
-          position: fixed;
-          background-color: black;
-        }
-        body {
-            margin: 0;
-            font-family: 'Kdam Thmor Pro', sans-serif; 
-        }
 
-        li a {
-            text-decoration: none;
-            color: white;
-        }
-   
-      .menu-icon {
-        display: block;
-        cursor: pointer;
-        padding: 5px;
-        padding-top: 15px;
-      }
-      .menu {
-  display: none;
-  list-style-type: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1s ease-out;
-}
-      
-      .menu li {
-        padding: 5px;
-        
-      }
-      .show {
-  display: block !important;
-  max-height: 200px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/398c96c2c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="general.CSS">
+  <title>Document</title>
 
-      .icon-size{
-        height: 125px;
-      }
-      
-      .welcome-section{
-        padding-top: 200px;
-        padding-left: 50px;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        background-color: black;
-        color: white;
+</head>
 
-      }
-      .welcome1{
-        font-size: 30px;
-        padding-bottom: 10px;
-
-      }
-
-      .welcome2{
-        color: white;
-
-      }
-      .watch-promo{
-    color: #ffffff!important;
-    border-width: 0px!important;
-    border-radius: 3px;
-    letter-spacing: 0px;
-    font-size: 20px;
-    font-weight: 700!important;
-    background-color: #FF0000;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    padding: 18px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 40px;
-    text-decoration: none;
-}
-
-  .watch-link a {
-text-decoration: none;
-color: white;
-cursor: pointer;
-  }    
-
-  .watch-link a button {
-text-decoration: none;
-color: white;
-cursor: pointer;
-  }    
-
-  .watch-link a button:hover{
-    opacity: .8;
-  }
-
-
-.latest{
-  height: 60px;
-  background-color: black;
-}
-
-img {cursor: pointer;}
-
-.social-container {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(3, 1fr);
-			gap: 10px;
-			padding: 10px;
-			background-color: black;
-		}
-
-		.grid-item {
-			background-color: transparent;
-			color: #fff;
-			text-align: center;
-			padding: 20px;
-			font-size: 30px;
-		}
-
-    .grid-item a{
-      color: white;
-    }
-    .high-section{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding-top: 100px;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        background-color: black;
-        color: white;
-        font-size: 28px;
-        height: 800px;
-
-    }
-    .hi-1{
-      padding-bottom: 50px;
-      width: 100%;
-      text-align: center;
-    }
-    .about-section{
-
-      padding-top: 100px;
-      padding-bottom: 50px;
-    }
-    .about-header{
-        font-size: 28px;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        background-color: black;
-        color: white;
-        padding-top: 50px;
-    }
-    .about-content{
-      background-color: black;
-      color: white;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-   
-    .team-section {
-  text-align: center;
-  width: 100%;
-}
-
-.team-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.team-member {
-  width: 300px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-}
-
-.team-member img {
-  width: 125px;
-  height: 125px;
-  object-fit: cover;
-  border-radius: 50%;
-  padding-top: 10px;
-}
-
-.team-member h3 {
-  margin-top: 20px;
-  font-size: 24px;
-}
-
-.team-member p {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.vid1{
-  width: 100%;
-  text-align: center;
-}
-
-.sponsor {
-  background-color: #f9f9f9;
-  padding: 20px;
-  text-align: center;
-}
-
-.sponsor h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.sponsor img {
-  max-width: 200px;
-  margin-bottom: 20px;
-}
-
-.sponsor p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.sponsor .btn {
-  display: inline-block;
-  background-color: #3d70b2;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.sponsor .btn:hover {
-  background-color: #325f99;
-}
-
-/* Style for the modal box */
-.modal {
-		  display: none;
-		  position: fixed;
-		  z-index: 1;
-		  left: 0;
-		  top: 0;
-		  width: 100%;
-		  height: 100%;
-		  overflow: auto;
-		  background-color: rgba(0,0,0,0.4);
-		}
-		
-		/* Style for the modal content */
-		.modal-content {
-		  background-color: #fefefe;
-		  margin: 10% auto;
-      margin-top: 100px;
-		  padding: 20px;
-		  border: 1px solid #888;
-		  width: 80%;
-		}
-		
-		.close:hover,
-		.close:focus {
-		  color: black;
-		  text-decoration: none;
-		  cursor: pointer;
-		}
-
-    .footer {
-			background-color: black;
-			color: #fff;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 50px;
-			text-align: center;
-			padding-top: 15px;}
-
-      .team-member a{
-        text-decoration: none;
-        color: black;
-
-      }
-
-      .team-member a:hover{
-        opacity: .5;
-      }
-    </style>
-
-  </head>
-  <body>
-    <nav>
-      <div class="menu-icon center-nav"><img class="icon-size" src="codex-logo.gif"</div>
+<body>
+  <nav>
+    <div class="menu-icon center-nav"><img class="icon-size" src="codex-logo.gif"</div>
       <ul class="menu">
         <li><a href="#">Shop</a></li>
         <li><a href="#">Contacts</a></li>
         <li><a href="#">About</a></li>
       </ul>
-    </nav>
+  </nav>
+  <!---------------------------- Welcome header---------------------------->
+  <div class="welcome-section">
+    <div class="welcome1">Welcome to the CodeX hub!</div>
+    <div class="welcome2">New content is posted daily on all major social media<br>platforms.</div>
+    <div class="watch-link"><a href="https://www.youtube.com/channel/UCsJO4udoFqbwgc0D9i1ePjg"><button
+          class="watch-promo">Watch Now</button></a></div>
+  </div>
 
-    <div class="welcome-section">
-      <div class="welcome1">Welcome to the CodeX hub!</div>
-      <div class="welcome2">New content is posted daily on all major social media<br>platforms.</div>
-      <div class="watch-link"><a href="https://www.youtube.com/channel/UCsJO4udoFqbwgc0D9i1ePjg"><button class="watch-promo">Watch Now</button></a></div>
-    </div>
 
 
+  <div class="latest"></div>
+  <!---------------------------- Social Icon Section---------------------------->
+  <div class="social-container">
+    <div class="grid-item"><a href="https://m.facebook.com/TheCodeXStation/"><i
+          class="fa-brands fa-xl fa-facebook all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a href="https://twitter.com/TheCodeXStation"><i
+          class="fa-brands fa-xl fa-twitter all-icons icon-margin"></i> </a></div>
+    <div class="grid-item"><a href="https://www.instagram.com/thecodexstation/"><i
+          class="fa-brands fa-xl fa-instagram all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a href="https://www.youtube.com/c/TheCodeXStation"><i
+          class="fa-brands fa-xl fa-youtube all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a
+        href="https://open.spotify.com/show/3QOFNOyq8YEXwHwwZt7dzD?si=LGO958joTVeHAn5rpTKFpw&utm_source=copy-link"><i
+          class="fa-brands fa-xl fa-spotify all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a href="https://discord.gg/M3vmkEwD"><i
+          class="fa-brands fa-xl fa-discord all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a href="https://www.tiktok.com/@thecodexstation"><i
+          class="fa-brands fa-xl fa-tiktok all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a href="https://m.twitch.tv/thecodexstation"><i
+          class="fa-brands fa-xl fa-twitch all-icons icon-margin"></i></a></div>
+    <div class="grid-item"><a href="https://www.patreon.com/TheCodeXStation"><i
+          class="fa-brands fa-xl fa-patreon all-icons icon-margin"></i></a></div>
+  </div>
 
-    <div class="latest">
-    </div>
 
-    <div class="social-container">
-      <div class="grid-item"><a href="https://m.facebook.com/TheCodeXStation/"><i class="fa-brands fa-xl fa-facebook all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://twitter.com/TheCodeXStation"><i class="fa-brands fa-xl fa-twitter all-icons icon-margin"></i> </a></div>
-      <div class="grid-item"><a href="https://www.instagram.com/thecodexstation/"><i class="fa-brands fa-xl fa-instagram all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://www.youtube.com/c/TheCodeXStation"><i class="fa-brands fa-xl fa-youtube all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://open.spotify.com/show/3QOFNOyq8YEXwHwwZt7dzD?si=LGO958joTVeHAn5rpTKFpw&utm_source=copy-link"><i class="fa-brands fa-xl fa-spotify all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://discord.gg/M3vmkEwD"><i class="fa-brands fa-xl fa-discord all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://www.tiktok.com/@thecodexstation"><i class="fa-brands fa-xl fa-tiktok all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://m.twitch.tv/thecodexstation"><i class="fa-brands fa-xl fa-twitch all-icons icon-margin"></i></a></div>
-      <div class="grid-item"><a href="https://www.patreon.com/TheCodeXStation"><i class="fa-brands fa-xl fa-patreon all-icons icon-margin"></i></a></div>
-    </div>
- 
+  <!---------------------------- Youtube Video links---------------------------->
+  <div class="high-section">
+    <div class="hi-1">Highlights</div>
+    <div class="vid1"><iframe width="425" height="315" src="https://www.youtube.com/embed/1KINUcr8Rdo"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe></div>
+    <div><iframe width="425" height="315" src="https://www.youtube.com/embed/PnFh2H_7Jus" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe></div>
+  </div>
 
-    <div class="high-section">
-      <div class="hi-1">Highlights</div>
-      <div class="vid1"><iframe width="425" height="315" src="https://www.youtube.com/embed/1KINUcr8Rdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-      <div><iframe width="425" height="315" src="https://www.youtube.com/embed/PnFh2H_7Jus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-    </div>
+  <section class="team-section">
+    <h2>Meet the Team</h2>
 
-    <section class="team-section">
-      <h2>Meet the Team</h2>
-      <div class="team-container">
-        <div class="team-member">
-          <img src="jamie.jpg" alt="Jamie Wojcik" onclick="openModal('modal1')">
-          <h3>Jamie Wojcik</h3>
-          <p>CEO</p>
-          <p>is the creator of the Code X Station and contributes to all shows.</p>
+    <!---------------------------- Team Container---------------------------->
+    <div class="team-container">
+
+      <!---------------------------- Jamie Wojcik---------------------------->
+      <div class="team-member">
+        <img src="jamie.jpg" alt="Jamie Wojcik" onclick="openModal('modal1')">
+        <h3>Jamie Wojcik</h3>
+        <p>CEO</p>
+        <p>is the creator of the Code X Station and contributes to all shows.</p>
+      </div>
+
+      <!-- Bio box for Jamie Wojcik  -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <h2>Jamie Wojcik</h2>
+          <p>Jamie Wojcik is the blank </p>
+          <p>Here is another section of content</p>
+          <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+            purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
         </div>
-
-        <!-- Modal box for User Profile 1 -->
-	<div id="modal1" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closeModal('modal1')">&times;</span>
-			<h2>Jamie Wojcik</h2>
-			<p>Jamie Wojcik is the blank </p>
-			<p>Here is another section of content</p>
-			<p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit, purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
-		</div>
-	</div>
-        
-        <div class="team-member">
-          <img src="sk.jpg" alt="Team Member 1" onclick="openModal('modal2')">
-          <h3>Sonny Kruger</h3>
-          <p>Host</p>
-          <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7evqU9JGJWL4GZGYEfhXAct">Code-X Podcast</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a>| Mail Call| One Shots</p>
-           <!-- Modal box for User Profile 2 -->
-	<div id="modal2" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closeModal('modal2')">&times;</span>
-			<h2>Sonny Kruger</h2>
-			<p>Sonny Kruger is the blank </p>
-			<p>Here is another section of content</p>
-			<p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit, purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
-		</div>
-	</div>
-     
+      </div>
+      <!---------------------------- Sonny Kruger---------------------------->
+      <div class="team-member">
+        <img src="sk.jpg" alt="Sonny Kruger" onclick="openModal('modal2')">
+        <h3>Sonny Kruger</h3>
+        <p>Host</p>
+        <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7evqU9JGJWL4GZGYEfhXAct">Code-X Podcast</a>| <a
+            href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a>| Mail
+          Call| One Shots</p>
+        <!-- Bio box for Sonny Kruger  -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Sonny Kruger</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-        
-        <div class="team-member">
-          <img src="tim.jpg" alt="Team Member 1">
-          <h3>Tim Morse</h3>
-          <p>Host</p>
-          <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7evqU9JGJWL4GZGYEfhXAct">Code-X Podcast</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a>| Scripting editor| Breaking the Code| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| Decoding Panels| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7dd-VN-AGGARYLgBkvIaruq">One Shots</a></p>
-     
+      </div>
+      <!---------------------------- Tim Morse---------------------------->
+      <div class="team-member">
+        <img src="tim.jpg" alt="Tim Morse" onclick="openModal('modal3')">
+        <h3>Tim Morse</h3>
+        <p>Host</p>
+        <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7evqU9JGJWL4GZGYEfhXAct">Code-X Podcast</a>| <a
+            href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a>|
+          Scripting editor| Breaking the Code| <a
+            href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| Decoding
+          Panels| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7dd-VN-AGGARYLgBkvIaruq">One Shots</a></p>
+        <!-- Bio box for Tim Morse  -->
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Tim Morse</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-        
-        <div class="team-member">
-          <img src="kristen.jpg" alt="Team Member 1">
-          <h3>Kristen Kurek</h3>
-          <p>Host</p>
-          <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a></p>
-     
+      </div>
+      <!---------------------------- Kristen Kurek---------------------------->
+      <div class="team-member">
+        <img src="kristen.jpg" alt="Kristen Kurek" onclick="openModal('modal4')">
+        <h3>Kristen Kurek</h3>
+        <p>Host</p>
+        <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| <a
+            href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a></p>
+        <!-- Bio box for Kristen Kurek  -->
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Kristen Kurek</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-        
-        <div class="team-member">
-          <img src="sal.jpg" alt="Team Member 1">
-          <h3>Sal Rowe</h3>
-          <p>Host</p>
-          <p>Slabbed| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7c9JUlbANv5rtEX_8xJQOdr">Comic Character of the Week</p></a>
-     
+      </div>
+      <!---------------------------- Sal Rowe---------------------------->
+      <div class="team-member">
+        <img src="sal.jpg" alt="Sal Rowe" onclick="openModal('modal5')">
+        <h3>Sal Rowe</h3>
+        <p>Host</p>
+        <p>Slabbed| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>|
+          <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7c9JUlbANv5rtEX_8xJQOdr">Comic Character of the Week
+        </p></a>
+        <!-- Bio box for Kristen Kurek  -->
+        <div id="modal5" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Sal Rowe</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-        
-        <div class="team-member">
-          <img src="Dan.jpeg" alt="Team Member 1">
-          <h3>Dan Kelley</h3>
-          <p>Host</p>
-          <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7c9JUlbANv5rtEX_8xJQOdr">Comic Character of the Week</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X Reviews</a></p>
-     
+      </div>
+      <!---------------------------- Dan Kelley---------------------------->
+      <div class="team-member">
+        <img src="Dan.jpeg" alt="Dan Kelley" onclick="openModal('modal6')">
+        <h3>Dan Kelley</h3>
+        <p>Host</p>
+        <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| <a
+            href="https://www.youtube.com/playlist?list=PLeREvkTzMq7c9JUlbANv5rtEX_8xJQOdr">Comic Character of the
+            Week</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7cBv1pXRhDULtmKFskZp0pL">Code-X
+            Reviews</a></p>
+        <!-- Bio box for Dan Kelley  -->
+        <div id="modal6" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2>Dan Kelley</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-        <div class="team-member">
-          <img src="kevin.jpeg" alt="Team Member 1">
-          <h3>Kevin Berkeley</h3>
-          <p>Host</p>
-          <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7c9JUlbANv5rtEX_8xJQOdr">Comic Character of the Week</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a></p>
-     
+      </div>
+      <!---------------------------- Kevin Berkeley---------------------------->
+      <div class="team-member">
+        <img src="kevin.jpeg" alt="Kevin Berkeley" onclick="openModal('modal7')">
+        <h3>Kevin Berkeley</h3>
+        <p>Host</p>
+        <p><a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7c9JUlbANv5rtEX_8xJQOdr">Comic Character of the
+            Week</a>| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>
+        </p>
+        <!-- Bio box for Kevin Berkeley  -->
+        <div id="modal7" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <h2>Kevin Berkeley</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-        <div class="team-member">
-          <img src="wes.jpg" alt="Team Member 1">
-          <h3>Wes Baessler</h3>
-          <p>Host</p>
-          <p>Slabbed| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>| On the Spot</p>
+      </div>
+      <!---------------------------- Wes Baessler---------------------------->
+      <div class="team-member">
+        <img src="wes.jpg" alt="Wes Baessler" onclick="openModal('modal8')">
+        <h3>Wes Baessler</h3>
+        <p>Host</p>
+        <p>Slabbed| <a href="https://www.youtube.com/playlist?list=PLeREvkTzMq7e3vbjtQjL_Gp0psdtHIbzW">After Dark</a>|
+          On the Spot</p>
+        <!-- Bio box for Wes Baessler  -->
+        <div id="modal8" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <h2>Wes Baessler</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
-
-        <div class="team-member">
-          <img src="keith.jpg" alt="Team Member 1">
-          <h3>Keith Vanoskey II</h3>
-          <p>Graphic & Web</p>
+      </div>
+      <!---------------------------- Keith Vanoskey II---------------------------->
+      <div class="team-member">
+        <img src="keith.jpg" alt="Keith Vanoskey II" onclick="openModal('modal9')">
+        <h3>Keith Vanoskey II</h3>
+        <p>Graphic & Web</p>
+        <!-- Bio box for Keith Vanoskey II  -->
+        <div id="modal9" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <h2>Keith Vanoskey II</h2>
+            <p>Sonny Kruger is the blank </p>
+            <p>Here is another section of content</p>
+            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, eros in pharetra hendrerit,
+              purus nunc efficitur lacus, nec tempor metus lorem sed libero.</p>
+          </div>
         </div>
       </div>
 
 
+    </div>
 
 
 
 
+
+    <!---------------------------- About Section---------------------------->
     <div class="about-section">
       <div class="about-header">About the Code X Station</div>
-      <div class="about-content">The Code X Station is your one stop shop for all things<br>comics, news and graphics novels
-      . The idea was to create<br>a brand, not just one channel where multiple creators could<br>come together and share their
-      love and passion. As the<br>channel grows we hope to see more creators onboard<br>for our epic journey!
+      <div class="about-content">The Code X Station is your one stop shop for all things<br>comics, news and graphics
+        novels
+        . The idea was to create<br>a brand, not just one channel where multiple creators could<br>come together and
+        share their
+        love and passion. As the<br>channel grows we hope to see more creators onboard<br>for our epic journey!
       </div>
 
     </div>
-
+  <!---------------------------- Sponsor Section---------------------------->
     <section class="sponsor">
       <h2>Our Sponsor</h2>
       <div class="sponsor-info">
         <img src="dubby.PNG" alt="Sponsor Logo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus quis mi consequat dignissim eget a odio. Sed euismod, magna sit amet dapibus commodo, lorem felis pretium lectus, ac commodo leo dolor eget arcu.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus quis mi consequat dignissim eget a
+          odio. Sed euismod, magna sit amet dapibus commodo, lorem felis pretium lectus, ac commodo leo dolor eget arcu.
+        </p>
         <a href="https://example.com" class="btn">Visit Website</a>
       </div>
     </section>
 
 
 
+<!---------------------------- Suggestion Section---------------------------->
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdZGRGimFu8AaZHDFrtxGkuhnKE-yBFZrwmUn8mW0SA0jpKQQ/viewform?embedded=true"
+      width="400" height="491" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZGRGimFu8AaZHDFrtxGkuhnKE-yBFZrwmUn8mW0SA0jpKQQ/viewform?embedded=true" width="400" height="491" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
+ <!---------------------------- Footer Section---------------------------->     
     <div class="footer">
-		&copy; 2023 The Code-X Station
-	</div>
+      &copy; 2023 The Code-X Station
+    </div>
 
+    <script src="script.js"></script>
+</body>
 
-  <script>
-    const menuIcon = document.querySelector(".menu-icon");
-const menu = document.querySelector(".menu");
-
-menuIcon.addEventListener("click", () => {
- menu.classList.toggle("show");
-});
-
-// Close menu when user scrolls
-window.addEventListener("scroll", () => {
- menu.classList.remove("show");
-});
-   </script>
-    <script>
-      // Function to open the modal box
-      function openModal(id) {
-        var modal = document.getElementById(id);
-        modal.style.display = "block";
-      }
-      
-   // Close modal when user clicks outside of the modal box or scrolls the page
-window.onclick = function(event) {
-  var modals = document.getElementsByClassName("modal");
-  for (var i = 0; i < modals.length; i++) {
-    if (event.target == modals[i]) {
-      modals[i].style.display = "none";
-    }
-  }
-}
-
-window.onscroll = function() {
-  var modals = document.getElementsByClassName("modal");
-  for (var i = 0; i < modals.length; i++) {
-    modals[i].style.display = "none";
-  }
-}
-    </script>
-  </body>
 </html>

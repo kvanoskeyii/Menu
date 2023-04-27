@@ -1,0 +1,310 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    background-color: black;
+}
+
+body {
+    margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+    padding-top: 15px;
+}
+
+.menu {
+    display: none;
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+
+.menu li {
+    padding: 5px;
+
+}
+
+.show {
+    display: block !important;
+    max-height: 200px;
+}
+
+.icon-size {
+    height: 125px;
+}
+
+.welcome-section {
+    padding-top: 200px;
+    padding-left: 50px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: black;
+    color: white;
+
+}
+
+.welcome1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+
+}
+
+.welcome2 {
+    color: white;
+
+}
+
+.watch-promo {
+    color: #ffffff !important;
+    border-width: 0px !important;
+    border-radius: 3px;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 700 !important;
+    background-color: #FF0000;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.watch-link a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.watch-link a button {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.watch-link a button:hover {
+    opacity: .8;
+}
+
+
+.latest {
+    height: 60px;
+    background-color: black;
+}
+
+img {
+    cursor: pointer;
+}
+
+.social-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: black;
+}
+
+.grid-item {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.grid-item a {
+    color: white;
+}
+
+.high-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    height: 800px;
+
+}
+
+.hi-1 {
+    padding-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-section {
+
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.about-header {
+    font-size: 28px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+}
+
+.about-content {
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-section {
+    text-align: center;
+    width: 100%;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.team-member img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.team-member h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.team-member p {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.vid1 {
+    width: 100%;
+    text-align: center;
+}
+
+.sponsor {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.sponsor h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sponsor img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.sponsor p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sponsor .btn {
+    display: inline-block;
+    background-color: #3d70b2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sponsor .btn:hover {
+    background-color: #325f99;
+}
+
+/* Style for the modal box */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.team-member a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.team-member a:hover {
+    opacity: .5;
+}
